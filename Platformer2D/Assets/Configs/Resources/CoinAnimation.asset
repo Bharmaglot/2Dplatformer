@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f46c5e4ad0a4035428f3f71cd65734a2, type: 3}
+  m_Name: CoinAnimation
+  m_EditorClassIdentifier: 
+  Sequences:
+  - Track: 1
+    Sprites:
+    - {fileID: 8980438598086963491, guid: ede4b03d4049f481a80ce6756418b385, type: 3}
+    - {fileID: 3344596444136561788, guid: ede4b03d4049f481a80ce6756418b385, type: 3}
+    - {fileID: 1158639269171017508, guid: ede4b03d4049f481a80ce6756418b385, type: 3}
+    - {fileID: -6541766136644436370, guid: ede4b03d4049f481a80ce6756418b385, type: 3}
