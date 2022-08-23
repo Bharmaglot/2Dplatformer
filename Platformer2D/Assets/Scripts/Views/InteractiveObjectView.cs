@@ -7,10 +7,20 @@ namespace PlatformerMVC
     {
         public Action<LevelObjectView> OnActivate { get; set; }
 
+        public Action<QuestObjectView> OnCompletedQuest { get; set; }
+
+
         private void OnTriggerEnter2D(Collider2D collision)
         {
-            collision.TryGetComponent<LevelObjectView>(out LevelObjectView contactView);
-            OnActivate?.Invoke(contactView);
-        }
+            if(collision.TryGetComponent<LevelObjectView>(out LevelObjectView contactView))
+            {
+                OnActivate?.Invoke(contactView);
+            }
+
+            if(collision.TryGetComponent<QuestObjectView>(out QuestObjectView questItemView))
+            {
+                OnCompletedQuest?.Invoke(questItemView);
+            }
+         }
     }
 }

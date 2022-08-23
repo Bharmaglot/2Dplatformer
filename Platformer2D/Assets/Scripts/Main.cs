@@ -10,6 +10,8 @@ namespace PlatformerMVC
         [SerializeField] private CannonView _cannonView;
         [SerializeField] private List<LevelObjectView> _coinViews;
         [SerializeField] private GeneratorLevelView _generatorLevelView;
+        [SerializeField] private QuestView _questView;
+
 
 
         private PlayerController _playerController;
@@ -18,6 +20,7 @@ namespace PlatformerMVC
         private EmitterController _emitterController;
         private CoinsController _coinsController;
         private GeneratorController _generatorController;
+        private QuestConfigurator _questConfigurator;
 
         private void Awake()
         {
@@ -28,6 +31,8 @@ namespace PlatformerMVC
             _coinsController = new CoinsController(_playerView, _coinViews);
             _generatorController = new GeneratorController(_generatorLevelView);
             _generatorController.Start();
+            _questConfigurator = new QuestConfigurator(_questView, _playerView);
+            _questConfigurator.Init();
         }
 
         void Update()
