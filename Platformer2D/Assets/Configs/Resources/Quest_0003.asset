@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Quest_0003
   m_EditorClassIdentifier: 
   id: 3
-  type: 0
+  type: 1
